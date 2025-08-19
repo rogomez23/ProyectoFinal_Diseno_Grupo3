@@ -17,8 +17,8 @@
 
     <!-- Menú de navegación -->
     <nav aria-label="Menú principal">
-        <input type="checkbox" id="menu-toggle" aria-hidden="true" hidden>
-        <label for="menu-toggle" class="menu-label" aria-hidden="true"></label>
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-label" aria-label="Abrir o cerrar menú" aria-controls="menu-principal"></label>
         
         <ul id="menu-principal">
             <li><a href="#personajes">Personajes</a></li>
@@ -61,7 +61,7 @@
         <!-- Formulario de inscripción -->
         <section id="formulario">
             <h2>Únete a la Resistencia</h2>
-            <form action="#" method="POST">
+            <form action="#gracias" method="POST">
                 <label for="nombre">Nombre del héroe:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autofocus aria-required="true">
 
@@ -76,12 +76,13 @@
 
                 <button type="submit">Enviar solicitud</button>
             </form>
+            <p id="gracias" class="mensaje-envio" role="status" aria-live="polite">¡Solicitud enviada con éxito!</p>
         </section>
 
         <!-- Mapa decorativo -->
         <section id="mapa">
             <h2>Mapa del Mundo</h2>
-            <img src="https://mrcheeze.github.io/botw-waypoint-map/BotW-Map.png">
+            <img src="https://mrcheeze.github.io/botw-waypoint-map/BotW-Map.png" alt="Mapa del mundo de Hyrule">
         </section>
     </main>
 

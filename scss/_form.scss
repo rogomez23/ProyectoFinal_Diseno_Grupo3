@@ -33,6 +33,11 @@ form {
             background-color: rgba($rustic-brown, 0.3);
             color: rgba($light-beige, 0.5);
         }
+
+        &:invalid {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+        }
     }
     
     button {
@@ -58,4 +63,18 @@ form {
         font-size: 1.1rem;
         padding: $spacing-small $spacing-large;
     }
+}
+
+.mensaje-envio {
+    display: none;
+    margin-top: $spacing-unit;
+    padding: $spacing-unit;
+    background-color: rgba($rustic-brown, 0.5);
+    border: $border-rustic;
+    border-radius: $border-radius;
+    color: $light-blue;
+}
+
+#gracias:target {
+    display: block;
 }
