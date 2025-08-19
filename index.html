@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda - Únete a la Resistencia</title>
+    <link href="estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Encabezado con logo -->
+    <header>
+        <img src="https://static.wikia.nocookie.net/zelda/images/e/e6/Trifuerza.png/revision/latest?cb=20130331185756&path-prefix=es" alt="Logo The Legend of Zelda">
+        <h1>Elige tu destino</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav aria-label="Menú principal">
+        <input type="checkbox" id="menu-toggle" aria-hidden="true" hidden>
+        <label for="menu-toggle" class="menu-label" aria-hidden="true"></label>
+        
+        <ul id="menu-principal">
+            <li><a href="#personajes">Personajes</a></li>
+            <li><a href="#objetos">Objetos Legendarios</a></li>
+            <li><a href="#formulario">Únete</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección Personajes -->
+        <section id="personajes">
+            <h2>Personajes</h2>
+            <div class="tarjetas">
+                <article role="region" aria-label="Link">
+                    <h3>Link</h3>
+                    <p>Héroe elegido de Hyrule.</p>
+                </article>
+                <article role="region" aria-label="Zelda">
+                    <h3>Zelda</h3>
+                    <p>Princesa sabia de Hyrule.</p>
+                </article>
+                <article role="region" aria-label="Ganondorf">
+                    <h3>Ganondorf</h3>
+                    <p>Rey del mal.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Objetos Legendarios -->
+        <section id="objetos">
+            <h2>Objetos Legendarios</h2>
+            <ul>
+                <li>Espada Maestra</li>
+                <li>Ocarina del Tiempo</li>
+                <li>Escudo Hyliano</li>
+            </ul>
+        </section>
+
+        <!-- Formulario de inscripción -->
+        <section id="formulario">
+            <h2>Únete a la Resistencia</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre del héroe:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autofocus aria-required="true">
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="Tu correo" required aria-required="true">
+
+                <label for="arma">Arma preferida:</label>
+                <input type="text" id="arma" name="arma" placeholder="Espada, arco, magia..." readonly value="Espada Maestra">
+
+                <label for="codigo">Código secreto (opcional):</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Solo para héroes legendarios" disabled>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+
+        <!-- Mapa decorativo -->
+        <section id="mapa">
+            <h2>Mapa del Mundo</h2>
+            <img src="https://mrcheeze.github.io/botw-waypoint-map/BotW-Map.png">
+        </section>
+    </main>
+
+    <!-- Final de pagina -->
+    <footer>
+        <p>&copy; 2025 La leyenda continúa.</p>
+    </footer>
+</body>
+
+</html>

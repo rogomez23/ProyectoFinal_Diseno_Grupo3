@@ -1,0 +1,41 @@
+header {
+    text-align: center;
+    padding: $spacing-large 0;
+    position: relative;
+    
+    img {
+        width: 100px;
+        height: auto;
+        filter: drop-shadow(0 0 5px $triforce-gold);
+        animation: pulse 2s infinite alternate;
+    }
+    
+    h1 {
+        margin: $spacing-medium 0 0;
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes pulse {
+    from {
+        filter: drop-shadow(0 0 5px $triforce-gold);
+    }
+    to {
+        filter: drop-shadow(0 0 15px $triforce-gold);
+    }
+}
+
+@media (max-width: map-get($breakpoints, 'small')) {
+  header {
+    padding: v.$spacing-medium 0;
+    
+    img {
+      width: 80px;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin: v.$spacing-small 0 0;
+    }
+  }
+}

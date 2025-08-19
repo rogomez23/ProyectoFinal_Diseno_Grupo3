@@ -1,0 +1,61 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba($rustic-brown, 0.5);
+    padding: $spacing-medium;
+    border-radius: $border-radius;
+    border: $border-rustic;
+    
+    label {
+        display: block;
+        margin-bottom: $spacing-small;
+        font-family: $fantasy-font;
+        color: $light-blue;
+    }
+    
+    input {
+        width: 100%;
+        padding: $spacing-small;
+        margin-bottom: $spacing-unit;
+        background-color: rgba($dark-green, 0.7);
+        border: $border-rustic;
+        border-radius: $border-radius;
+        color: $light-beige;
+        font-family: $sans-serif;
+        
+        &:focus {
+            outline: none;
+            border-color: $triforce-gold;
+            box-shadow: 0 0 5px rgba($triforce-gold, 0.5);
+        }
+        
+        &[readonly], &[disabled] {
+            background-color: rgba($rustic-brown, 0.3);
+            color: rgba($light-beige, 0.5);
+        }
+    }
+    
+    button {
+        background-color: $rustic-brown;
+    color: $triforce-gold;
+    border: $border-gold;
+    border-radius: $border-radius;
+    padding: $spacing-small $spacing-unit;
+    font-family: $fantasy-font;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: darken($rustic-brown, 10%);
+        transform: translateY(-2px);
+        box-shadow: $box-shadow;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+        margin-top: $spacing-unit;
+        font-size: 1.1rem;
+        padding: $spacing-small $spacing-large;
+    }
+}

@@ -1,0 +1,70 @@
+.text-center {
+    text-align: center;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+
+.hidden {
+    display: none !important;
+}
+
+// Lista de objetos legendarios
+#objetos ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        position: relative;
+        padding-left: $spacing-unit;
+        margin-bottom: $spacing-small;
+        font-family: $fantasy-font;
+        
+        &:before {
+            content: '★';
+            color: $triforce-gold;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+// Mapa
+#mapa {
+    text-align: center;
+    
+    img {
+        border: $border-gold;
+        box-shadow: $box-shadow;
+        max-height: 500px;
+        object-fit: contain;
+    }
+}
+
+// Clases para accesibilidad responsive
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: map-get($breakpoints, 'medium')) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+  
+  // Asegurar tamaño táctil
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

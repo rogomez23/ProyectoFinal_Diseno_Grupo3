@@ -1,0 +1,11 @@
+footer {
+    text-align: center;
+    padding: $spacing-medium;
+    background-color: rgba($rustic-brown, 0.8);
+    border-top: $border-gold;
+    font-family: $fantasy-font;
+    
+    p {
+        margin: 0;
+    }
+}

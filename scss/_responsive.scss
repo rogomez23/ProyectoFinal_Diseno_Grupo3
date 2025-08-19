@@ -1,0 +1,126 @@
+// _responsive.scss
+@use 'variables' as v;
+
+/* ==================== */
+/* ESTRATEGIA MOBILE FIRST (Sin JS) */
+/* ==================== */
+
+// Breakpoints accesibles
+$breakpoints: (
+  'small': 576px,
+  'medium': 768px,
+  'large': 992px,
+  'xlarge': 1200px
+);
+
+/* Menú Hamburguesa Puro CSS */
+@media (max-width: map-get($breakpoints, 'medium')) {
+  [id="menu-toggle"] {
+    display: none; /* Ocultar checkbox */
+  }
+
+  .menu-label {
+    display: block;
+    cursor: pointer;
+    padding: v.$spacing-small;
+    text-align: center;
+    background: rgba(v.$rustic-brown, 0.8);
+    color: v.$triforce-gold;
+    font-family: v.$fantasy-font;
+    
+    &::before {
+      content: "☰ Menú";
+    }
+  }
+
+  #menu-principal {
+    display: none;
+    flex-direction: column;
+  }
+
+  [id="menu-toggle"]:checked ~ #menu-principal {
+    display: flex;
+  }
+
+  [id="menu-toggle"]:checked ~ .menu-label::before {
+    content: "✕ Cerrar";
+  }
+}
+
+/* Tablet (768px+) */
+@media (min-width: map-get($breakpoints, 'medium')) {
+  .menu-label {
+    display: none; /* Ocultar label en desktop */
+  }
+
+  #menu-principal {
+    display: flex !important; /* Forzar mostrar siempre */
+  }
+}
+
+/* ==================== */
+/* ACCESIBILIDAD VISUAL */
+/* ==================== */
+
+// Enfoque de zoom
+@media (max-width: map-get($breakpoints, 'large')) {
+  html {
+    font-size: 16px; // Base para móviles
+    
+    :focus {
+      outline: 3px solid v.$triforce-gold;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// Contraste en modo claro/oscuro
+@media (prefers-color-scheme: light) {
+  body {
+    color: #333;
+    background: #f5f5dc;
+    
+    a {
+      color: #1a5a96;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==================== */
+/* COMPONENTES RESPONSIVOS */
+/* ==================== */
+
+// Ajuste de tarjetas
+@media (max-width: map-get($breakpoints, 'small')) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+    
+    article {
+      padding: v.$spacing-medium;
+      
+      &:focus-within {
+        box-shadow: 0 0 0 3px v.$triforce-gold;
+      }
+    }
+  }
+}
+
+// Formularios accesibles
+@media (max-width: map-get($breakpoints, 'medium')) {
+  form {
+    input, button {
+      min-height: 44px; // Tamaño táctil mínimo WCAG
+    }
+    
+    button:focus {
+      outline-offset: -2px;
+    }
+  }
+}
