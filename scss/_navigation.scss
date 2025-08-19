@@ -40,33 +40,3 @@ nav {
         }
     }
 }
-
-@media (max-width: map-get($breakpoints, 'medium')) {
-  nav {
-    position: relative;
-    padding: v.$spacing-small 0;
-    
-    ul {
-      flex-direction: column;
-      display: none;
-      
-      &.active {
-        display: flex;
-      }
-    }
-    
-    li {
-      margin: v.$spacing-small 0;
-    }
-  }
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: v.$light-beige;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0 auto;
-    padding: v.$spacing-small;
-  }
-}

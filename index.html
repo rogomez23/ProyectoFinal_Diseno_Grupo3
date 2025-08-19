@@ -17,8 +17,8 @@
 
     <!-- Menú de navegación -->
     <nav aria-label="Menú principal">
-        <input type="checkbox" id="menu-toggle" aria-hidden="true" hidden>
-        <label for="menu-toggle" class="menu-label" aria-hidden="true"></label>
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="menu-label" aria-label="Abrir o cerrar menú" aria-controls="menu-principal" role="button" tabindex="0" aria-expanded="false"></label>
         
         <ul id="menu-principal">
             <li><a href="#personajes">Personajes</a></li>
@@ -35,14 +35,17 @@
             <div class="tarjetas">
                 <article role="region" aria-label="Link">
                     <h3>Link</h3>
+                    <img src="https://static.wikia.nocookie.net/zelda_gamepedia_en/images/6/6d/ALBW_Link.png" alt="Link empuñando la Espada Maestra">
                     <p>Héroe elegido de Hyrule.</p>
                 </article>
                 <article role="region" aria-label="Zelda">
                     <h3>Zelda</h3>
+                    <img src="https://static.wikia.nocookie.net/zelda_gamepedia_en/images/5/5d/Princess_Zelda_TOTK.png" alt="La princesa Zelda">
                     <p>Princesa sabia de Hyrule.</p>
                 </article>
                 <article role="region" aria-label="Ganondorf">
                     <h3>Ganondorf</h3>
+                    <img src="https://static.wikia.nocookie.net/zelda_gamepedia_en/images/f/f9/Ganondorf_BotW.png" alt="Ganondorf el rey del mal">
                     <p>Rey del mal.</p>
                 </article>
             </div>
@@ -61,7 +64,7 @@
         <!-- Formulario de inscripción -->
         <section id="formulario">
             <h2>Únete a la Resistencia</h2>
-            <form action="#" method="POST">
+            <form action="#gracias" method="POST">
                 <label for="nombre">Nombre del héroe:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autofocus aria-required="true">
 
@@ -76,12 +79,13 @@
 
                 <button type="submit">Enviar solicitud</button>
             </form>
+            <p id="gracias" class="mensaje-envio" role="status" aria-live="polite">¡Solicitud enviada con éxito!</p>
         </section>
 
         <!-- Mapa decorativo -->
         <section id="mapa">
             <h2>Mapa del Mundo</h2>
-            <img src="https://mrcheeze.github.io/botw-waypoint-map/BotW-Map.png">
+            <img src="https://mrcheeze.github.io/botw-waypoint-map/BotW-Map.png" alt="Mapa del mundo de Hyrule">
         </section>
     </main>
 

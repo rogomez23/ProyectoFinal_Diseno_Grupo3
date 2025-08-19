@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: $dark-green; 
     color: $light-beige;
@@ -24,8 +28,14 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
     
-    &:hover {
+    &:hover,
+    &:focus {
         color: $triforce-gold;
+    }
+
+    &:focus {
+        outline: 2px solid $triforce-gold;
+        outline-offset: 2px;
     }
 }
 
